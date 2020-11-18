@@ -2,10 +2,10 @@
 
 #include "Stocznia.hpp"
 
-static unsigned int towary = 0;
 unsigned int transportujFlota(unsigned int towar)
 {
 	int liczbaZagl = 0;
+  unsigned int towary = 0;
 
 	if(towar == 0){
 	return 0;
