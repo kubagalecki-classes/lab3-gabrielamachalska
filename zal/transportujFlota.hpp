@@ -2,8 +2,23 @@
 
 #include "Stocznia.hpp"
 
+static unsigned int towary = 0;
 unsigned int transportujFlota(unsigned int towar)
 {
-    // Twoja implementacja tutaj
-    return 0;
+	int liczbaZagl = 0;
+
+	if(towar == 0){
+	return 0;
+	}
+		Stocznia stocznia{};
+	
+	while(towary < towar){
+	Statek* s1 = stocznia();
+	unsigned int towar = s1->transportuj();
+	towary += towar;
+	if(dynamic_cast<Zaglowiec*>(s1)){
+		liczbaZagl++;
+	}
+	}
+    return liczbaZagl;
 }
